@@ -1,4 +1,4 @@
-package com.queatz.db
+package day.gooddaybad.db
 
 /**
  * Queries.kt

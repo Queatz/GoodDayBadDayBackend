@@ -1,4 +1,4 @@
-package com.queatz
+package day.gooddaybad
 
 
 class ApplicationTest {

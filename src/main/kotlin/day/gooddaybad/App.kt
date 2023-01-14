@@ -1,6 +1,6 @@
-package com.queatz
+package day.gooddaybad
 
-import com.queatz.db.Db
+import day.gooddaybad.db.Db
 import io.ktor.serialization.kotlinx.json.*
 import kotlinx.coroutines.CoroutineScope
 

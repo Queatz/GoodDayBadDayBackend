@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalSerializationApi::class)
 
-package com.queatz.db
+package day.gooddaybad.db
 
 import com.arangodb.entity.From
 import com.arangodb.entity.Key

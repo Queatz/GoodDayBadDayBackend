@@ -1,6 +1,6 @@
-package com.queatz
+package day.gooddaybad
 
-import com.queatz.routes.meRoutes
+import day.gooddaybad.routes.meRoutes
 import io.ktor.server.application.*
 import io.ktor.server.auth.*
 import io.ktor.server.http.content.*

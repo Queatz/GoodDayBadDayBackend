@@ -1,9 +1,9 @@
-package com.queatz.routes
+package day.gooddaybad.routes
 
-import com.queatz.db
-import com.queatz.db.Person
-import com.queatz.me
-import com.queatz.randomToken
+import day.gooddaybad.db
+import day.gooddaybad.db.Person
+import day.gooddaybad.me
+import day.gooddaybad.randomToken
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.auth.*

@@ -1,4 +1,4 @@
-package com.queatz.db
+package day.gooddaybad.db
 
 import com.arangodb.*
 import com.arangodb.entity.CollectionType
@@ -18,7 +18,7 @@ import com.fasterxml.jackson.databind.module.SimpleModule
 import com.fasterxml.jackson.databind.module.SimpleSerializers
 import com.fasterxml.jackson.databind.ser.std.StdSerializer
 import com.fasterxml.jackson.module.kotlin.KotlinModule
-import com.queatz.json
+import day.gooddaybad.json
 import kotlinx.datetime.Clock
 import kotlinx.datetime.Instant
 import kotlinx.datetime.toJavaInstant

@@ -1,1 +1,1 @@
-rootProject.name = "ktor-arango"
+rootProject.name = "Good Day Bad Day Backend"

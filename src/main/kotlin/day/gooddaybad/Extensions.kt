@@ -1,4 +1,4 @@
-package com.queatz
+package day.gooddaybad
 
 import org.slf4j.LoggerFactory
 import kotlin.random.Random

@@ -1,7 +1,7 @@
-package com.queatz
+package day.gooddaybad
 
-import com.queatz.db.Person
-import com.queatz.db.person
+import day.gooddaybad.db.Person
+import day.gooddaybad.db.person
 import io.ktor.http.*
 import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.application.*
