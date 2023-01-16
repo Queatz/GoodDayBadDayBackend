@@ -1,9 +1,34 @@
-Setup
+Build
+
+```shell
+./gradlew shadowJar
+```
+
+Output is at `build/libs/Good Day Bad Day Backend-all.jar`
+
+Configure Arango
+--------------
+
+Install from
+https://www.arangodb.com/download-major/ubuntu/
+
+```shell
+echo '{"default":"en_US.UTF-8"}' > /var/lib/arangodb3/LANGUAGE
+service arangodb3 restart
+
+arangosh --server.username root --server.password root
+arangosh> const users = require('@arangodb/users')
+arangosh> users.save('gooddaybadday', 'gooddaybadday')
+arangosh> db._createDatabase('gooddaybadday')
+arangosh> users.grantDatabase('gooddaybadday', 'gooddaybadday', 'rw')
+```
+
+Deploy
 =====
 
 ```shell
 apt update
-apt install certbot nginx
+apt install certbot nginx default-jre python3-certbot-nginx
 certbot
 ```
 
@@ -16,14 +41,15 @@ certbot
 ```
 server {
     server_name _;
+    listen 80;
 
     location / {
-        proxy_pass http://localhost:8081;
+        proxy_pass http://localhost:9090;
     }
 }
 ```
 
-3. Finally, restart Nginx
+3. Finally
 
 ```shell
 service nginx restart

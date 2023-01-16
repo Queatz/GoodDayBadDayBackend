@@ -9,10 +9,10 @@ plugins {
     id("com.github.johnrengelman.shadow") version "7.1.2"
 }
 
-group = "com.queatz"
+group = "day.gooddaybad"
 version = "0.0.1"
 application {
-    mainClass.set("com.queatz.ApplicationKt")
+    mainClass.set("day.gooddaybad.ApplicationKt")
 
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
