@@ -22,6 +22,10 @@ package day.gooddaybad.db
 
 fun collections() = listOf(
     collection<Person> {
-        index(Person::token)
+        index(Person::password)
+        index(Person::active)
+    },
+    collection<PromptPack> {
+        index(PromptPack::active)
     }
 )

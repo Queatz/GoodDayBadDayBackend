@@ -13,15 +13,23 @@ import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.JsonNames
 
-/**
- * Models.kt
- *
- * Put all database models in this file.
- */
+@Serializable
+class Person(
+    var name: String? = null,
+    var active: Boolean? = null,
+    var password: String? = null,
+) : Model()
 
 @Serializable
-data class Person(
-    var token: String? = null
+class PromptPack(
+    var name: String? = null,
+    var color: String? = null,
+    var person: String? = null,
+    var author: String? = null,
+    var level: String? = null,
+    var active: Boolean? = null,
+    var description: String? = null,
+    var prompts: List<String>? = null
 ) : Model()
 
 /**

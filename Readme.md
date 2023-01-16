@@ -1,37 +1,38 @@
-# Readme
+Setup
+=====
 
-Jacob's ultra basic Ktor + Arango setup.
+```shell
+apt update
+apt install certbot nginx
+certbot
+```
 
-Remember to change the package name!
+## HTTP -> HTTPS
 
-## Files
+1. Configure Nginx
 
-See individual files for more info.
+2. Replace the contents of `/etc/nginx/sites-enabled/default` with the following
 
-### `App.kt`
-App state. Change Arango login here. Replace with DI as needed.
+```
+server {
+    server_name _;
 
-### `Application.kt`
-Ktor server. Change authentication method here.
+    location / {
+        proxy_pass http://localhost:8081;
+    }
+}
+```
 
-### `Routes.kt`
-Configure route setup here. Put routes in routes/.
+3. Finally, restart Nginx
 
-### `db/Collections.kt`
-Configure Arango collections here.
+```shell
+service nginx restart
+```
 
-### `db/Models.kt`
-Put database models here. Create a models/ folder as desired.
+Run
+===
 
-### `db/Queries.kt`
-Put database queries here. Create a queries/ folder as desired.
-
-## Run
-
-`./gradlew run`
-
-From IntelliJ, run `fun main()` in `Application.kt`.
-
-## Build
-
-`./gradlew shadowJar`
+```shell
+#! /bin/bash
+nohup java -jar *.jar > log.txt 2> errors.txt < /dev/null &
+```

@@ -12,4 +12,4 @@ import kotlinx.coroutines.CoroutineScope
 
 lateinit var scope: CoroutineScope
 val json = DefaultJson
-val db = Db("db", "db", "db")
+val db = Db("gooddaybadday", "gooddaybadday", "gooddaybadday")

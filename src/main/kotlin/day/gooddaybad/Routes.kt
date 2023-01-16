@@ -1,6 +1,8 @@
 package day.gooddaybad
 
 import day.gooddaybad.routes.meRoutes
+import day.gooddaybad.routes.packRoutes
+import day.gooddaybad.routes.stewardRoutes
 import io.ktor.server.application.*
 import io.ktor.server.auth.*
 import io.ktor.server.http.content.*
@@ -17,7 +19,9 @@ fun Application.routes() {
             resources("static")
         }
         meRoutes()
+        packRoutes()
+        stewardRoutes()
     }
 }
 
-fun PipelineContext<*, ApplicationCall>.me() = call.principal<PersonPrincipal>()
+fun PipelineContext<*, ApplicationCall>.me() = call.principal<PersonPrincipal>()!!.person
